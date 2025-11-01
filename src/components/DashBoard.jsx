@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from '../css/dashboard.module.css'
 import Navbar from './Navbar'
 import axios from 'axios';
+import { toast } from 'react-toastify';
 function DashBoard() {
   const [popup, setPopup] = useState(false);
   const [myevents, setMyevents] = useState([]);
@@ -51,7 +52,13 @@ function DashBoard() {
     e.preventDefault();
     console.log('Event Created:', formData);
     try {
-      const response = await axios.post('https://slotswapper-backend-2.onrender.com/api/v1/event/create', formData, { withCredentials: true });
+   const response=   await toast.promise(
+       axios.post('https://slotswapper-backend-2.onrender.com/api/v1/event/create', formData, { withCredentials: true }),
+       {
+       pending: "Event is being saved...",
+        success: "Event saved successfully ",
+        error: "Failed to save Event ",
+       });
       console.log('Server Response:', response.data);
       await events();
       setPopup(false);
