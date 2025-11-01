@@ -15,7 +15,7 @@ function DashBoard() {
 
     const events = async () => {
       try {
-       const response = await axios.get('http://localhost:4000/api/v1/event/myevents', { withCredentials: true });
+       const response = await axios.get('https://slotswapper-backend-2.onrender.com/api/v1/event/myevents', { withCredentials: true });
     const eventList = response.data;
     const grouped = eventList.reduce((acc, event) => {
       const date = new Date(event.startTime).toISOString().split("T")[0];
@@ -51,7 +51,7 @@ function DashBoard() {
     e.preventDefault();
     console.log('Event Created:', formData);
     try {
-      const response = await axios.post('http://localhost:4000/api/v1/event/create', formData, { withCredentials: true });
+      const response = await axios.post('https://slotswapper-backend-2.onrender.com/api/v1/event/create', formData, { withCredentials: true });
       console.log('Server Response:', response.data);
       await events();
       setPopup(false);

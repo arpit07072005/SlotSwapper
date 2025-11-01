@@ -10,7 +10,7 @@ function Signup() {
   const navigate = useNavigate();
   const handleClick= async()=>{
     try {
-      const response = await axios.post('http://localhost:4000/api/v1/user/signup',{
+      const response = await axios.post('https://slotswapper-backend-2.onrender.com/api/v1/user/signup',{
          username: name,
         email:email,
         password:password

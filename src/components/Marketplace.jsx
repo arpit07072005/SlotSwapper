@@ -13,7 +13,7 @@ function Marketplace() {
   useEffect(() => {
     const Data = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/v1/swap/swappable-slots', { withCredentials: true });
+        const response = await axios.get('https://slotswapper-backend-2.onrender.com/api/v1/swap/swappable-slots', { withCredentials: true });
         setSlots(response.data);
       } catch (error) {
         console.error('Error fetching swappable slots data:', error);
@@ -23,7 +23,7 @@ function Marketplace() {
 
     const event = async () => {
       try {
-          const response = await axios.get('http://localhost:4000/api/v1/event/myevents',{withCredentials: true});  
+          const response = await axios.get('https://slotswapper-backend-2.onrender.com/api/v1/event/myevents',{withCredentials: true});  
           setMyevents(response.data);
         } catch (error) {
           console.error('Error fetching events:', error);
@@ -35,7 +35,7 @@ function Marketplace() {
 const handlesubmit=async(e)=>{
   e.preventDefault();
   try {
-    const response = await axios.post('http://localhost:4000/api/v1/swap/swaprequest', {
+    const response = await axios.post('https://slotswapper-backend-2.onrender.com/api/v1/swap/swaprequest', {
       theirSlotId: selectedSlot._id,
       mySlotId:  mySlotId
     }, { withCredentials: true });

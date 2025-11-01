@@ -13,7 +13,7 @@ function Navbar() {
     useEffect(() => {
       const user = async () => {
         try {
-          const response = await axios.post("http://localhost:4000/api/v1/user/myself", {}, { withCredentials: true });
+          const response = await axios.post("https://slotswapper-backend-2.onrender.com/api/v1/user/myself", {}, { withCredentials: true });
           setUser(response.data.user);
         } catch (error) {
           console.log("Error fetching user data:", error);
@@ -24,7 +24,7 @@ function Navbar() {
     }, [])
   const handlelogout = async () => {
     try {
-      await axios.post("http://localhost:4000/api/v1/user/logout", {}, { withCredentials: true });
+      await axios.post("https://slotswapper-backend-2.onrender.com/api/v1/user/logout", {}, { withCredentials: true });
       toast.success("Logout successfully");
       navigate('/login')
     } catch (error) {

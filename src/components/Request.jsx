@@ -10,7 +10,7 @@ function Request() {
     
        const requests = async () => {
            try {
-               const response = await axios.get('http://localhost:4000/api/v1/swap/swapincoming', { withCredentials: true });
+               const response = await axios.get('https://slotswapper-backend-2.onrender.com/api/v1/swap/swapincoming', { withCredentials: true });
               console.log(response.data);
              const data = response.data.filter((request) => request.status !== "ACCEPTED" && request.status !== "REJECTED");
                setSwapRequests(data);
@@ -24,7 +24,7 @@ function Request() {
 
     const handleincoming= async()=>{
         try {
-               const response = await axios.get('http://localhost:4000/api/v1/swap/swapincoming', { withCredentials: true });
+               const response = await axios.get('https://slotswapper-backend-2.onrender.com/api/v1/swap/swapincoming', { withCredentials: true });
               console.log(response.data);
               const data = response.data.filter((request) => request.status !== "ACCEPTED" && request.status !== "REJECTED");
                setSwapRequests(data);
@@ -35,7 +35,7 @@ function Request() {
     }
     const handleoutgoing = async ()=>{
          try {
-               const response = await axios.get('http://localhost:4000/api/v1/swap/swapoutgoing', { withCredentials: true });
+               const response = await axios.get('https://slotswapper-backend-2.onrender.com/api/v1/swap/swapoutgoing', { withCredentials: true });
               const data = response.data.filter((request) => request.status !== "ACCEPTED" && request.status !== "REJECTED");
                setSwapRequests(data);
                setIncoming(false)
@@ -44,10 +44,10 @@ function Request() {
            }
     }
     const handleaccepted= async(e)=>{
-        const response = await axios.post('http://localhost:4000/api/v1/swap/swapresponse',{accepted:true,requestId:e._id},{ withCredentials: true })
+        const response = await axios.post('https://slotswapper-backend-2.onrender.com/api/v1/swap/swapresponse',{accepted:true,requestId:e._id},{ withCredentials: true })
     }
     const handlerejected= async(e)=>{
-        const response = await axios.post('http://localhost:4000/api/v1/swap/swapresponse',{accepted:false,requestId:e._id},{ withCredentials: true })
+        const response = await axios.post('https://slotswapper-backend-2.onrender.com/api/v1/swap/swapresponse',{accepted:false,requestId:e._id},{ withCredentials: true })
     }
     return (
         <div className={styles.app}>
