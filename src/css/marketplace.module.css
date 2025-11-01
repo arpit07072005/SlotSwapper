@@ -1,0 +1,231 @@
+.marketplace {
+   width: 82%;
+  height: 100vh;
+  overflow: auto;
+  padding-bottom: 2%;
+}
+.markettop{
+  margin-top: 3%;
+  padding: 0% 5%;
+}
+.top1{
+    font-size: 28px;
+  font-weight: bold;
+  color: #4E38F6;
+}
+.top2{
+     margin-top: 1%;
+  font-size: 20px;
+  color: #798CA0;
+}
+.circle{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+    background: linear-gradient(to right, #4155f1, #9733EE);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: xx-large;
+}
+.user{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 5%;
+}.username{
+  font-size: 20px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    padding: 0% 3%;
+    justify-content: center;
+}
+.card{
+    width: 350px;
+    height: 300px;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.topic{
+    margin: 3%;
+}
+.button{
+    margin-top: 10%;
+    padding: 12px 20px;
+    background: linear-gradient(to right, #4155f1, #9733EE);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.date{
+    margin-top: 5%;
+    color: #798CA0;
+    font-size: 20px;
+}
+.time{
+    margin-top: 2%;
+    color: #798CA0;
+    font-size: 20px;
+}
+
+
+/* --- Basic Popup Styles (Reused) --- */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.popupContainer {
+  background-color: #1a1a2e; /* Dark purple/blue background */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 480px; /* Thoda chhota hai yeh wala popup */
+  padding: 24px;
+  color: #f0f0f0;
+  border: 1px solid #3a3a5a;
+}
+
+/* --- Header (Reused) --- */
+.popupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.popupHeader h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.75rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 4px;
+}
+.closeButton:hover {
+  color: #fff;
+}
+
+/* --- Form Body --- */
+.popupBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* --- NAYI STYLES --- */
+.infoLabel {
+  font-size: 0.875rem;
+  color: #b0b0c0;
+}
+
+.infoBox {
+  background-color: #252540; /* Slightly lighter dark shade */
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid #4a4a6a;
+}
+
+.infoTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.infoDetails {
+  font-size: 0.9rem;
+  color: #c0c0d0;
+}
+
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-size: 0.875rem;
+  color: #b0b0c0;
+  margin-bottom: 6px;
+}
+
+.formGroup select {
+  background-color: #252540;
+  border: 1px solid #4a4a6a;
+  border-radius: 8px;
+  padding: 12px;
+  color: #f0f0f0;
+  font-size: 1rem;
+  font-family: inherit;
+  color-scheme: dark;
+}
+.popupFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+  border-top: 1px solid #3a3a5a;
+  padding-top: 20px;
+}
+
+.popupFooter button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* White button */
+.cancelButton {
+  background-color: #f0f0f0;
+  color: #222;
+}
+.cancelButton:hover {
+  background-color: #dcdcdc;
+}
+.requestButton {
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  color: white;
+}
+.requestButton:hover {
+  opacity: 0.9;
+}

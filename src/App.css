@@ -1,0 +1,14 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: rgb(241, 243, 248);
+}
+.app{
+  background: linear-gradient(to bottom right, rgb(22, 20, 36), rgb(18, 16, 33));
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: center;
+  height: 100vh;
+}

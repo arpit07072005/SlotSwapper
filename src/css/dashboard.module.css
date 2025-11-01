@@ -1,0 +1,324 @@
+.app{
+  background: linear-gradient(to bottom right, rgb(22, 20, 36), rgb(18, 16, 33));
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+.left {
+  width: 18%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgb(25, 23, 41), rgb(18, 16, 29));
+  border: 1px solid rgb(46, 43, 79);
+}
+.topleft {
+  width: 100%;
+  height: 10vh;
+  border-bottom: 1px solid rgb(46, 43, 79);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.middleleft {
+  width: 100%;
+  height: 70vh;
+  border-bottom: 1px solid rgb(46, 43, 79);
+  padding-top: 6%;
+}
+.bottomleft {
+  width: 100%;
+  height: 25vh;
+}
+.middleleftbutton {
+  width: 80%;
+  height: 10%;
+  border-radius: 2px;
+  margin: auto;
+  background: #4E38F6;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  cursor: pointer;
+  margin-top: 3%;
+  font-size: 18px;
+  gap: 12px;
+}
+.middleleftbutton:hover{
+  background-color:#2B333F ;
+}
+.icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  gap: 12px;
+  font-weight: bold;
+     background: linear-gradient(to right, #4155f1, #9733EE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.circle{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #4155f1, #9733EE);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: xx-large;
+}
+.user{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 10%;
+  padding-top: 5%;
+}.username{
+  font-size: 15px;
+}
+.logout{
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  margin-left: 18%;
+  cursor: pointer;
+  gap: 12px;
+  font-size: 20px;
+}
+.right {
+  width: 82%;
+  height: 100vh;
+}
+.topright {
+  margin-top: 2%;
+  width: 100%;
+  height: 18vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0% 5%;
+}
+.righttopcontent{
+  font-size: 28px;
+  font-weight: bold;
+  color: #4E38F6;
+}
+.rightbottomcontent{
+  margin-top: 3%;
+  font-size: 20px;
+  color: #798CA0;
+}
+.rightbutton{
+  width: 140px;
+  height: 40px;
+     background: linear-gradient(to right, #4155f1, #9733EE);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.calendercontainer{
+  width: 92%;
+  height: 46vh;
+  margin: auto;
+  margin-top: 2%;
+  background: #101624;
+  border-radius: 12px;
+}
+.calendertop{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4E38F6;
+  padding-top: 3.5%;
+}
+.calenderrightbuttons{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.datescontainer{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+} 
+.dates{
+  margin-top: 2%;
+  width: 11%;
+  height: 80%;
+  background-color: #101926;
+  border: 1px solid rgb(46, 43, 79);
+  border-radius: 5px;
+  padding: 1%;
+}
+.busy,.swappable,.pending{
+padding: 2% 7%;
+  background: #2B333F;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.swappable{
+  background: #13388F;
+}
+.pending{
+  background: #8A6C13;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.popupcontainer {
+  background-color: #1a1a2e; 
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 500px;
+  padding: 24px;
+  color: #f0f0f0;
+  border: 1px solid #3a3a5a;
+}
+.popupheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.popupheader h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.closebutton {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.75rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 4px;
+}
+.closebutton:hover {
+  color: #fff;
+}
+.popupbody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formgroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formgroup label {
+  font-size: 0.875rem;
+  color: #b0b0c0;
+  margin-bottom: 6px;
+}
+
+.formgroup input[type="text"],
+.formgroup input[type="datetime-local"],
+.formgroup select,
+.formgroup textarea {
+  background-color: #252540;
+  border: 1px solid #4a4a6a;
+  border-radius: 8px;
+  padding: 12px;
+  color: #f0f0f0;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.formgroup input::placeholder,
+.formgroup textarea::placeholder {
+  color: #777;
+}
+
+.formgroup input[type="datetime-local"] {
+  color-scheme: dark;
+}
+
+.formgroup textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.formRow {
+  display: flex;
+  gap: 16px;
+}
+
+.formRow .formGroup {
+  flex: 1;
+}
+
+.popupFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+  border-top: 1px solid #3a3a5a;
+  padding-top: 20px;
+}
+
+.popupFooter button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancelButton {
+  background-color: #f0f0f0;
+  color: #222;
+}
+.cancelButton:hover {
+  background-color: #dcdcdc;
+}
+
+.saveButton {
+  background: linear-gradient(90deg, #8e2de2, #4a00e0); 
+  color: white;
+}
+
+.status{
+  background-color: #13388F;
+  border-radius: 5px;
+  padding: 2%;
+    font-size: 11px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 10%;
+}
