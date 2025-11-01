@@ -129,18 +129,18 @@ function DashBoard() {
               </div>
 
               <div className={styles.formRow}>
-                <div className={styles.formGroup}>
+                <div className={styles.formgroup}>
                   <label htmlFor="startTime">Start Time</label>
                   <input
                     type="datetime-local"
                     id="startTime"
                     name="startTime"
-                    value={formData.startTime}
+                    value={formData.starttime}
                     onChange={handleChange}
                     required
                   />
                 </div>
-                <div className={styles.formGroup}>
+                <div className={styles.formgroup}>
                   <label htmlFor="endTime">End Time</label>
                   <input
                     type="datetime-local"
@@ -153,7 +153,7 @@ function DashBoard() {
                 </div>
               </div>
 
-              <div className={styles.formGroup}>
+              <div className={styles.formgroup}>
                 <label htmlFor="status">Status</label>
                 <select id="status" name="status" value={formData.status} onChange={handleChange}>
                   <option value="BUSY">Busy</option>
